@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "cbs_loan_screen/1.0.0": {
+        "runtime": {
+          "cbs_loan_screen.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cbs_loan_screen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

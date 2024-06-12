@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\cbs_loan_screen.props" />
+</Project>

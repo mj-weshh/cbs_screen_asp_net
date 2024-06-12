@@ -1,0 +1,495 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+        <section class="section">
+          <div class="section-body">
+
+            <div class="row">
+              <div class="col-md-9">
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab"
+                           aria-controls="account" aria-selected="true">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="statement-tab" data-toggle="tab" href="#statement" role="tab"
+                           aria-controls="statement" aria-selected="false">Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="special-conditions-tab" data-toggle="tab" href="#special-conditions"
+                           role="tab" aria-controls="special-conditions" aria-selected="false">Special Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="block-tab" data-toggle="tab" href="#block" role="tab" aria-controls="block"
+                           aria-selected="false">Block</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="unblock-tab" data-toggle="tab" href="#unblock" role="tab"
+                           aria-controls="unblock" aria-selected="false">Unblock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="close-tab" data-toggle="tab" href="#close" role="tab" aria-controls="close"
+                           aria-selected="false">Close</a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+                    <div class="row">
+
+                      <div class="">
+                        <div class="card">
+                          <form class="needs-validation" novalidate="">
+
+                            <div class="card-header">
+                              <h3>Account Details</h3>
+                              <hr>
+                            </div>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-6">
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="branchid" class="col-sm-3 col-form-label">Branch ID</label>
+                                    <div class="col-sm-8">
+                                      <select class="form-control">
+                                        <option>-Select Branch Name-</option>
+                                        <option>01 - UPPERHILL BRANCH</option>
+                                        <option>Option 3</option>
+                                      </select>
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="productid" class="col-sm-3 col-form-label">Product ID</label>
+                                    <div class="col-sm-8">
+                                      <select class="form-control">
+                                        <option>-Select Product Name-</option>
+                                        <option>ASSET FINANCE LOAN</option>
+                                        <option>Option 3</option>
+                                      </select>
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="accountid" class="col-sm-3 col-form-label">Account ID</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="accountid">
+                                      <div class="invalid-feedback">Invalid Account!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="address1" class="col-sm-3 col-form-label">Address 1</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="address1">
+                                      <div class="invalid-feedback">Invalid Address!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="country" class="col-sm-3 col-form-label">Country</label>
+                                    <div class="col-sm-8">
+                                      <select class="form-control">
+                                        <option>-Select Country-</option>
+                                        <option>Kenya</option>
+                                        <option>Uganda</option>
+                                        <option>Tanzania</option>
+                                        <option>Sudan</option>
+                                        <option>Ethiopia</option>
+                                        <option>Somalia</option>
+                                      </select>
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="mobile" class="col-sm-3 col-form-label">Mobile</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="mobile">
+                                      <div class="invalid-feedback">Invalid Mobile number!</div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="form-group mb-3 row">
+                                    <label for="productId" class="col-sm-3 col-form-label">Client ID</label>
+                                    <div class="col-sm-9">
+                                      <div class="form-inline no-gap">
+                                        <input type="text" class="form-control col-sm-2" id="productId" required>
+                                        <input type="text" class="form-control col-sm-8" id="clientName" readonly
+                                          placeholder="Client Name">
+                                        <button type="button" class="btn btn-primary col-sm-2" id="searchClient">
+                                          <i class="fas fa-search"></i>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="productid" class="col-sm-3 col-form-label">Operating Mode</label>
+                                    <div class="col-sm-8">
+                                      <select class="form-control">
+                                        <option>-Select Mode-</option>
+                                        <option>Self</option>
+                                        <option>Joined</option>
+                                      </select>
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="name" class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="name">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="address2" class="col-sm-3 col-form-label">Address 2</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="address2">
+                                      <div class="invalid-feedback">Invalid Address!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="city" class="col-sm-3 col-form-label">City</label>
+                                    <div class="col-sm-8">
+                                      <select class="form-control">
+                                        <option>-Select City-</option>
+                                        <option>Nairobi</option>
+                                        <option>Addis Ababa</option>
+                                        <option>Voi</option>
+                                        <option>Kisumu</option>
+                                        <option>Wajir</option>
+                                        <option>Eldoret</option>
+                                      </select>
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="phone" class="col-sm-3 col-form-label">Phone</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="phone">
+                                      <div class="invalid-feedback">Invalid Phone number!</div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="card-header">
+                                  <h3>Account Balances</h3>
+                                  <hr>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="accountid" class="col-sm-3 col-form-label">Unclear Balance</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="accountid">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="accountid" class="col-sm-3 col-form-label">Unsupervised Debts</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="accountid">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="freezedAmounts" class="col-sm-3 col-form-label">Freezed Amounts</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="freezedAmounts">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="availableBalance" class="col-sm-3 col-form-label">Available
+                                      Balance</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="availableBalance">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="debitInterest" class="col-sm-3 col-form-label">Debit Interest</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="debitInterest">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="debitInterest" class="col-sm-3 col-form-label">Drawing Power</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="debitInterest">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="currencyId" class="col-sm-3 col-form-label">Currency ID</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="currencyId">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="status">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <div class="form-group mb-3 row">
+                                    <label for="clearBalance" class="col-sm-3 col-form-label">Clear Balance</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="clearBalance">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="unsupervisedCredits" class="col-sm-3 col-form-label">Unsupervised
+                                      Credits</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="unsupervisedCredits">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="minimumBalance" class="col-sm-3 col-form-label">Minimum Balance</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="minimumBalance">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="totalBalance" class="col-sm-3 col-form-label">Total Balance</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="totalBalance">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="creditInterest" class="col-sm-3 col-form-label">Credit Interest</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="creditInterest">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="penaltyInterest" class="col-sm-3 col-form-label">Penalty
+                                      Interest</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="penaltyInterest">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mb-3 row">
+                                    <label for="interestRecievable" class="col-sm-3 col-form-label">Interest
+                                      Recievable</label>
+                                    <div class="col-sm-8">
+                                      <input type="text" class="form-control" id="interestRecievable">
+                                      <div class="invalid-feedback">Invalid!</div>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                                <div class="card-header">
+                                  <h3>Audit Info</h3>
+                                  <hr>
+                                </div>
+
+                                <div class="card-body">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group mb-3 row">
+                                        <label for="created_by" class="col-sm-3 col-form-label">Created By</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control" id="created_by" readonly>
+                                          <div class="invalid-feedback">Invalid!</div>
+                                        </div>
+                                      </div>
+                                      <div class="form-group mb-3 row">
+                                        <label for="created_on" class="col-sm-3 col-form-label">Created On</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control" id="created_on" readonly>
+                                          <div class="invalid-feedback">Invalid!</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group mb-3 row">
+                                        <label for="modified_on" class="col-sm-3 col-form-label">Modified By</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control" id="modified_on" readonly>
+                                          <div class="invalid-feedback">Invalid!</div>
+                                        </div>
+                                      </div>
+                                      <div class="form-group mb-3 row">
+                                        <label for="modified_by" class="col-sm-3 col-form-label">Modified By</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control" id="modified_by" readonly>
+                                          <div class="invalid-feedback">Invalid!</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="statement" role="tabpanel" aria-labelledby="statement-tab">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Statement Section</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="special-conditions" role="tabpanel"
+                    aria-labelledby="special-conditions-tab">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Special Conditions Section</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="block" role="tabpanel" aria-labelledby="block-tab">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Block Section</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="unblock" role="tabpanel" aria-labelledby="unblock-tab">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Unblock Section</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="close" role="tabpanel" aria-labelledby="close-tab">
+                    <div class="card">
+                      <div class="card-body">
+                        <h2>Close Section</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-3">
+                <div class="card card-primary">
+                  <div class="card-body">
+                    <form action="">
+                      
+                      <div class="form-group mb-3">
+                        <label for="branchid" class="col-form-label">Branch ID</label>
+                        <div class="">
+                          <select class="form-control">
+                            <option>-Select Branch Name-</option>
+                            <option>01 - UPPERHILL BRANCH</option>
+                            <option>Option 3</option>
+                          </select>
+                          <div class="invalid-feedback">Invalid!</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label for="productId" class="col-form-label">Client ID</label>
+                        <div class="">
+                          <div class="form-inline no-gap">
+                            <input type="text" class="form-control col-sm-2" id="productId" required>
+                            <input type="text" class="form-control col-sm-8" id="clientName" readonly
+                              placeholder="Client Name">
+                            <button type="button" class="btn btn-primary col-sm-2" id="searchClient">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label for="name" class="col-form-label">Name</label>
+                        <div class="">
+                          <input type="text" class="form-control" id="name">
+                          <div class="invalid-feedback">Invalid!</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label for="productid" class="col-form-label">Product ID</label>
+                        <div class="">
+                          <select class="form-control">
+                            <option>-Select Product Name-</option>
+                            <option>ASSET FINANCE LOAN</option>
+                            <option>Option 3</option>
+                          </select>
+                          <div class="invalid-feedback">Invalid!</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <label for="accountId" class="col-form-label">Account ID</label>
+                        <div class="">
+                          <div class="form-inline no-gap">
+                            <input type="text" class="form-control col-sm-2" id="accountId" required>
+                            <input type="text" class="form-control col-sm-8" id="accountName" readonly
+                              placeholder="Account Name">
+                            <button type="button" class="btn btn-primary col-sm-2" id="searchAccount">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="button" class="btn btn-icon icon-left btn-info btn-block"><i
+                          class="far fa-plus-square"></i>Add</button>
+                      <button type="button" class="btn btn-icon icon-left btn-warning btn-block"><i class="far fa-edit"></i>Edit</button>
+                      <button type="button" class="btn btn-icon icon-left btn-primary btn-block"><i
+                          class="far fa-save"></i>Save</button>
+                      <button type="button" class="btn btn-icon icon-left btn-danger btn-block"><i
+                          class="far fa-times-circle"></i>Cancel</button>
+                    </form>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
